@@ -530,12 +530,7 @@ class System
         $data = json_decode($response, true);
         if ($err) {
             echo "<script>
-                   /* $.bootstrapGrowl('Login error: ".$err."', {
-                        type: 'danger',
-                        align: 'center',
-                        width: 'auto',
-                        allow_dismiss: false
-                    });*/
+                   /* */
                     alert('".$err."');
                   </script>";
             echo "<script> window.open('".$this->domain()."/', '_self') </script>";

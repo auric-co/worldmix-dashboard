@@ -53,7 +53,7 @@ if ($err) {
 
 <html lang="en">
 <head>
-    <base href="./../">
+    <base href="./../../">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -203,7 +203,6 @@ if ($err) {
                                             <ul class="list-inline">
                                                 <li class="list-inline-item" title="Edit"><a href="#"> <i class="fa fa-pencil"></i></a></li>
                                                 <li class="list-inline-item" title="Delete"><a href="#"> <i class="fa fa-trash text-danger"></i></a></li>
-                                                <li class="list-inline-item" title="More"><a href="<?php echo $admin->domain()?>/dashboard/categories/accommodation/types"> Bedrooms <i class="fa fa-arrow-right"></i></a></li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -216,7 +215,7 @@ if ($err) {
                         </table>
                     </div>
                     <div class="card-footer">
-                        <a href="<?php echo $admin->domain()."/dashboard/categories/accommodation/types/add.php"; ?>" class="btn btn-success">Add Sub Category</a>
+                        <a href="<?php echo $admin->domain()."/dashboard/categories/accommodation/add.php"; ?>" class="btn btn-success">Add Sub Category</a>
                     </div>
                 </div>
 

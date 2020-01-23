@@ -152,7 +152,7 @@ if ($admin->checkLoginState() !== true){
                         $request = json_encode(array('name' => $name, "description" =>$description));
                         $curl = curl_init();
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL => $admin->apiURL() . "/api/admin/add/subcategory/higher/".$_GET['id'],
+                            CURLOPT_URL => $admin->apiURL() . "/api/admin/add/subcategory/higher/2",
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => "",
                             CURLOPT_MAXREDIRS => 10,
@@ -177,7 +177,7 @@ if ($admin->checkLoginState() !== true){
 
                                 $message = "Problem in saving subcategory";
                                 $result = $data['error'] ? $message.". Error: ".$data['error'] : $message.". Error: ".$data['error']['message'];
-                                echo "<script>alert('".$result."')</script>";
+                                echo "<script>alert('".$data."')</script>";
                             }
                         }
                     }
@@ -203,7 +203,7 @@ if ($admin->checkLoginState() !== true){
 
                         $curl = curl_init();
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL => $admin->apiURL() . "/api/admin/add/upload/".$_GET['item']."/higher",
+                            CURLOPT_URL => $admin->apiURL() . "/api/admin/add/upload/2/higher",
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => "",
                             CURLOPT_MAXREDIRS => 10,
@@ -239,7 +239,7 @@ if ($admin->checkLoginState() !== true){
                     ?>
                     <div class="card-header"> Add Accommodation Sub Categories</div>
                     <div class="card-body">
-                        <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']?>" method="post" id="addSubCat1">
+                        <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>?item=<?php echo $_GET['item']; ?>" method="post" id="addSubCat1">
 
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="name">Name</label>
